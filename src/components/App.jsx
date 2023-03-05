@@ -30,7 +30,7 @@ export const App = () => {
       />
 
       <Statistics
-        title="Title"
+        title="Upload Stats"
         stats={data}
       />
 
@@ -39,7 +39,7 @@ export const App = () => {
       />
 
       <TransactionHistory
-        items={transactions}
+        transactions={transactions}
       />
 
     </div>
