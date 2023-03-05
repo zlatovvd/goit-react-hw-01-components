@@ -1,5 +1,6 @@
 .transactionHistory {
   margin-top: 50px;
+  margin-bottom: 50px;
   border-radius: 5px;
   padding: 10px;
   background-color: #ffffff;
@@ -7,14 +8,22 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+tr {
+  font-size: 14px;
+  height: 40px;
+}
+
 thead tr {
   color: #ffffff;
   background-color: cornflowerblue;
+  text-transform: uppercase;
 }
 
 td {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-width: 150px;
+  text-align: center;
 }
 
 tbody tr:nth-child(2n) {

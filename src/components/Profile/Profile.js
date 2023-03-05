@@ -1,5 +1,5 @@
 import css from './Profile.module.css';
-//import PropTypes from "prop-types"
+import PropTypes from 'prop-types';
 
 export const Profile = ({avatar, username, tag, location, stats}) => {
     return (
@@ -29,7 +29,12 @@ export const Profile = ({avatar, username, tag, location, stats}) => {
   );
 }
 
-// Profile.PropTypes = {
-//   username: PropTypes.string,
-//   tag: PropTypes.string,
-// }
+Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  // stats: PropTypes.object({
+  //   likes: PropTypes.number.isRequired,
+  // }),
+};

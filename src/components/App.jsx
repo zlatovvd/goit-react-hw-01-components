@@ -14,13 +14,13 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        // justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101'
       }}
     >
-      React homework template
       <Profile
         avatar={user.avatar}
         username={user.username}
@@ -28,6 +28,20 @@ export const App = () => {
         location={user.location}
         stats={user.stats}
       />
+
+      <Statistics
+        title="Title"
+        stats={data}
+      />
+
+      <FriendList
+        friends={friends}
+      />
+
+      <TransactionHistory
+        items={transactions}
+      />
+
     </div>
   );
 };
