@@ -13,24 +13,27 @@ export const TransactionHistory = ({ transactions }) => {
       </thead>
 
       <tbody>
-        {transactions.map(item => (
-          <tr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+        {transactions.map(item => {
+          const {id, type, amount, currency} = item;
+          return (
+          <tr key={id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
           </tr>
-        ))}
+        )})}
       </tbody>
     </table>
   );
 };
 
 TransactionHistory.propTypes = {
-  transitions: PropTypes.arrayOf(
+  transactions: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      amount: PropTypes.number.isRequired,
+      amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };
